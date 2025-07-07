@@ -10,4 +10,4 @@ console.log (number);
 console.log (name);
 console.log (age);
 
-// to run this file, use the command: node 01_variable.js
+// to run this file, use the command: node 01_variables.js
