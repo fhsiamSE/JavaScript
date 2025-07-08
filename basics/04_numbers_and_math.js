@@ -25,3 +25,11 @@ console.log(Math.round(4.5)); // Output: 5
 console.log(Math.max(1, 2, 3)); // Output: 3
 console.log(Math.min(1, 2, 3)); // Output: 1
 console.log(Math.random()*50); // Output: Random number between 0 and 1
+console.log(Math.sqrt(16)); // Output: 4
+console.log(Math.pow(2, 3)); // Output: 8 (2 raised to
+// the power of 3)
+console.log(Math.log(10)); // Output: 2.302585092994046 (natural logarithm of 10)
+console.log(Math.log10(100)); // Output: 2 (base 10 logarithm of 100)   
+console.log(Math.sin(Math.PI / 2)); // Output: 1 (sine of 90 degrees)
+console.log(Math.cos(Math.PI)); // Output: -1 (cosine of 180 degrees)
+
