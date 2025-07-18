@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom learning</title>
+</head>
+<body>
+    <div>
+        <h1 id="title" class="heading">Welcome to the DOM learning page</h1>
+        <p>This page is designed to help you understand how to manipulate the DOM using JavaScript.</p>
+
+    </div>
+</body>
+<script>
+    //select by id
+    document.getElementById("title").innerHTML = "Welcome to the DOM Manipulation Page"; // Change the text of the title
+    title.innerHTML = "Welcome to the DOM Manipulation2 Page"; // Change the text of the title
+    title.textContent = "Welcome to the DOM Manipulation3 Page"; // Change the text of the title using textContent
+
+    //select by class name
+    document.querySelector(".heading").style.fontSize = "2em"; // Change the font size of the heading
+    document.querySelector(".heading").style.fontFamily = "Arial, sans-serif"; // Change the font family of the heading
+    document.querySelector(".heading").style.color = "blue"; // Change the color of the heading
+    //select by tag name
+    document.querySelector("p").style.fontSize = "1.2em"; // Change the font size of the paragraph
+
+    //select by id
+    document.querySelector("#title").style.textAlign = "center"; // Change the text alignment of the title
+    document.querySelector("#title").style.backgroundColor = "lightgray"; // Change the background
+
+
+    </script>
+</html>

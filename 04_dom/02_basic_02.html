@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <ul>
+        <li>monday</li>
+        <li>tuesday</li>
+        <li>wednesday</li>
+        <li>thursday</li>
+        <li>friday</li>
+    </ul>
+</body>
+
+<script>
+    const array = document.querySelectorAll("li"); // Select all list items
+    console.log(array); // Log the NodeList to the console
+    array.forEach((item) => {
+        item.style.color = "red"; // Change the text color of each list item to red
+        item.style.fontSize = "20px"; // Change the font size of each list item
+        item.style.fontFamily = "Arial, sans-serif"; // Change the font family of each list item
+    });
+</script>
+
+
+
+</html>
