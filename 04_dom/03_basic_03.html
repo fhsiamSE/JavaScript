@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Objeect Model</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thursday</div>
+        <div class="day">friday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent'); // Select the parent element
+    const children = parent.children; // Get all child elements of the parent
+
+    console.log(parent); // Log the parent element to the console
+    console.log(children); // Log the HTMLCollection of child elements to the console
+    console.log(children[0]); // Log the first child element to the console
+    console.log(children[1]); // Log the second child element to the console
+
+    for (let i = 0; i < children.length; i++) {
+        children[i].style.color = "green"; // Change the text color of each child element to green
+        children[i].style.fontSize = "20px"; // Change the font size of each child element
+        children[i].style.fontFamily = "Arial, sans-serif"; // Change the font family of each child element
+    }
+
+
+
+</script>
+</html>
