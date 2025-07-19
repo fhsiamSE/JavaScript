@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ui class="language">
+        <li>JavaScript</li>
+    </ui>
+</body>
+<script>
+    // Function to add a new language to the list
+    function addLanguage(languageName) {
+        const li = document.createElement("li"); // Create a new list item
+        li.innerHTML = `${languageName}`; // Set the text of the list item. 
+        document.querySelector(".language").appendChild(li); // Append the new list item to the unordered list
+    }
+    addLanguage("Python"); // Call the function to add a new language
+    addLanguage("Java"); // Call the function to add another language
+
+    //optimig function (innerHTML allows will traversal all HTML tags).
+    function addLanguageOptimized(languageName) {
+        const li = document.createElement("li"); // Create a new list item
+        li.appendChild(document.createTextNode(languageName)); // Set the text of the list item using createTextNode
+        document.querySelector(".language").appendChild(li); // Append the new list item to the unordered list
+    }
+    addLanguageOptimized("C++"); // Call the optimized function to add a new language
+
+
+    //editing the text of an existing list item
+    const secondItem = document.querySelector(".language li:nth-child(2)"); // Select the second list item
+    secondItem.innerHTML = "Updated Language"; // Change the text of the second list item
+
+    //another way to edit the text of an existing list item
+    const thirdItem = document.querySelector(".language li:nth-child(3)"); // Select the third list item
+    const newLi = document.createElement("li"); // Create a new list item
+    newLi.textContent = "New Language"; // Set the text of the new list item
+    thirdItem.parentNode.replaceChild(newLi, thirdItem); // Replace the third list item
+
+    //removing a list item
+    const firstItem = document.querySelector(".language li:first-child"); // Select the first list
+    firstItem.parentNode.removeChild(firstItem); // Remove the first list item
+</script>
+</html>
