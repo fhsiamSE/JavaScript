@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>backgroundColor Changer</title>
+</head>
+<body>
+    <h1 class="head">Color Changing Button</h1>
+<span> <button class="button" id="gray">gray</button> </span>
+<span> <button class="button" id="white">white</button> </span>
+<span> <button class="button" id="blue">blue</button> </span>
+<span> <button class="button" id="yellow">yellow</button> </span>
+</body>
+<style>
+    .head {
+        text-align: center;
+        color: rgb(255, 0, 13);
+        font-family: Arial, sans-serif;
+    }
+    .button {
+        color: white;
+        padding: 50px;
+        text-align: center;
+        width: 20%;
+        margin: 25px;
+        margin-top: 150px;
+    }
+    #gray {
+        background-color: gray;
+    }
+    #white {
+        background-color: white;
+        color: black;
+    }
+    #blue {
+        background-color: blue;
+    }
+    #yellow {
+        background-color: yellow;
+        color: black;
+    }
+</style>
+<script>
+    const buttons = document.querySelectorAll('.button'); // Select all buttons
+    const body = document.querySelector('.body'); // Select the body element
+
+    buttons.forEach((btn)=>{
+        btn.addEventListener('click', (e)=>{
+        if (e.target.id === 'gray') {
+            document.body.style.backgroundColor = 'gray'; // Change background color to gray
+        } else if (e.target.id === 'white') {
+            document.body.style.backgroundColor = 'white'; // Change background color to white
+        } else if (e.target.id === 'blue') {
+            document.body.style.backgroundColor = 'blue'; // Change background color to blue
+        } else if (e.target.id === 'yellow') {
+            document.body.style.backgroundColor = 'yellow'; // Change background color to yellow    
+        }
+        })
+    })
+</script>
+</html>
