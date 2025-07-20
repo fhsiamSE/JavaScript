@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Current Time</h1>
+        <div id="time"></div>
+    </div>
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    #time {
+        background-color: chocolate;
+        padding: 20px;
+        border-radius: 10px;
+        width: 200px;
+        justify-self: center;
+        color: white;
+        font-size: 2em;
+    }
+    </style>
+    <script>
+        const time = document.getElementById('time');
+        setInterval(() => {
+            
+            let updateTime = new Date();
+            time.innerHTML = updateTime.toLocaleTimeString();
+        }, 1000);
+        
+
+    </script>
+</html>
