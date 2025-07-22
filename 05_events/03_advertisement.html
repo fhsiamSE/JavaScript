@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My website</title>
+</head>
+<body>
+    <h1>Welcomee to the website</h1>
+    <button id="stopBtn">Stop the advertisement</button>
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    h1 {
+        color: #333;
+    }
+</style>
+<script>
+
+//eadvertisement pop up
+const showadvertisement = () => {
+    const advertisement = document.createElement('div');
+    advertisement.id = 'advertisement';
+    advertisement.style.position = 'fixed';
+    advertisement.style.top = '0';
+    advertisement.style.left = '0';
+    advertisement.style.width = '100%';
+    advertisement.style.height = '100%';
+    advertisement.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+    advertisement.style.display = 'flex';
+    advertisement.style.justifyContent = 'center';
+    advertisement.style.alignItems = 'center';
+    advertisement.innerHTML = '<h2>Advertisement: Buy our product!</h2>';
+    
+    document.body.appendChild(advertisement);
+};
+const advertisement = setTimeout(showadvertisement, 3000); // Show advertisement every 5 seconds
+
+//stop advertisement
+document.querySelector('#stopBtn').addEventListener('click', () => {
+    clearTimeout(advertisement); // Stop the advertisement from showing
+    console.log('Advertisement stopped');
+})
+</script>
+</html>
