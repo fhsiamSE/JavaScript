@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Start Counting</h1>
+    <button id="startBtn"> start </button>
+    <button id="stopBtn">Stop</button>
+</body>
+<style>
+     body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    h1 {
+        color: #333;
+    }
+    button {
+        width: 200px;
+        height: 100px;
+        margin: 50px;
+    }
+</style>
+<script>
+    const showCounting = () =>{
+        console.log('Counting...');
+    }
+
+    document.querySelector('#startBtn').addEventListener('click', () =>{
+        console.log('Counting started');
+        counting = setInterval(showCounting, 1000); // Start counting every second
+    })
+
+    document.querySelector('#stopBtn').addEventListener('click', () =>{
+        clearInterval(counting); // Stop counting
+        console.log('Counting stopped');
+    })
+    
+</script>
+</html>
