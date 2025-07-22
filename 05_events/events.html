@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Evenets</title>
+</head>
+<body>
+    <div class="Images">
+    <h1>Images for Evnets Handling</h1>
+    <img src="https://wallpapercave.com/wp/wp1844322.jpg" alt="Youtube Logo" id="Youtube" width="200" height="100">
+    <img src="https://ps360q.org/wp-content/uploads/2024/08/image-11.png" alt="Facebook Logo" id="Facebook" width="200" height="100">
+    <a href="https://www.instagram.com/" id="Instagram"><img src="https://static.vecteezy.com/system/resources/previews/016/716/448/original/instagram-icon-free-png.png" alt="Instagram Logo" width="200" height="100"></a>
+    </div>
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    img {
+        margin: 10px;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+    img:hover {
+        transform: scale(1.1);
+    }
+</style>
+
+<script>
+   document.getElementById("Youtube").addEventListener("click", function(i) {
+        alert("You clicked on the YouTube logo!");
+        console.log("You clicked on the YouTube logo!");
+    },false); //false to prevent default action
+    document.getElementById("Facebook").addEventListener("click", function(i) {
+          alert("You clicked on the Facebook logo!");
+            console.log("You clicked on the Facebook logo!");
+     },false);
+
+    //preventDefault to stop defult action of anchor tag
+    document.getElementById("Instagram").addEventListener("click", function(i){
+        i.preventDefault();
+        console.log("prevented")
+    })
+
+</script>
+</html>

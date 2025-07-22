@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Click image to remove</h1>
+    <ul id="image">
+        <li class="fb">
+            <img src="https://ps360q.org/wp-content/uploads/2024/08/image-11.png" alt="Facebook Logo" id="Facebook" width="200" height="100">
+        </li>
+        <li class="yt">
+            <img src="https://wallpapercave.com/wp/wp1844322.jpg" alt="Youtube Logo" id="Youtube" width="200" height="100">
+        </li>
+        <li class="insta">
+            <img src="https://static.vecteezy.com/system/resources/previews/016/716/448/original/instagram-icon-free-png.png" alt="Instagram Logo" width="200" height="100">
+        </li>
+    </ul>
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    ul.image {
+        list-style-type: none;
+        padding: 0;
+    }
+    li {
+        display: inline-block;
+        margin: 10px;
+    }
+    img {
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+    img:hover {
+        transform: scale(1.1);
+    }
+</style>
+
+<!-- JavaScript to handle image removal -->
+<script>
+    document.querySelector('#image').addEventListener('click', function(i){
+        if(i.target.tagName === 'IMG'){
+           i.target.parentNode.remove();
+           console.log(i.target.parentNode); // Logs the tag name of the clicked element
+        }
+    })
+</script>
+</html>
