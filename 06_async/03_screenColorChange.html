@@ -30,7 +30,7 @@
     
     document.getElementById('startBtn').addEventListener('click',()=>{
          ChangeColorNumber = () => {
-            let colorNumber = Math.floor(Math.random() * 10);
+            let colorNumber = Math.floor(Math.random() * 10); // this will give a number between 0 and 9
             document.body.style.backgroundColor = "#" + colorNumber + colorNumber + colorNumber + colorNumber + colorNumber + colorNumber;
         }
         
@@ -44,4 +44,4 @@
         ChangeColor = null; // Reset so you can't stop twice
     })
 </script>
-</html>
+</html> 
